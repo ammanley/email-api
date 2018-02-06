@@ -57,7 +57,7 @@ Finally, you can find two pre-built CURL requests using my emails (feel free to 
 }
 ```
 
-##Further Ideas
+## Further Ideas
 
 With more time I would definitely want to include user-testing on individual send events for each email provider, including checking for error-handling and invalid/edge-case inputs. Since we cannot rely on the actual email providers to conduct unit-tests, we would also want to setup a mock repository "API" for tests to check against, so that while we cannot rely on the email provider APIs themselves, we can model a mock repository on the expected responses from each email provider dependent on input (this would be quite time consuming to investigate properly). 
 
