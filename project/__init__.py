@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
 from project.email_providers import SendGridEmail, SparkPostEmail
+import os
 
 app = Flask(__name__)
 CORS(app)
+
 
 @app.route('/api')
 def root():
@@ -54,6 +56,5 @@ def send_email():
         # If original callback succeeded, return 200 response
         return res
 
-if __name__ == "__main__":
-    app.run(debug=True, port=5000)
-    # NEED TO GET API KEYS OUT OF FILE
+# if __name__ == "__main__":
+#     app.run(debug=True, port=5000)

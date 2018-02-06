@@ -6,7 +6,8 @@ from flask import Response
 
 class SparkPostEmail:
     """class object for creating and sending a email through SparkPost"""
-    sp = SparkPost('b52095de67842daa5a5a3b1cfd951d9790f6eb02')
+    # sp = SparkPost('b52095de67842daa5a5a3b1cfd951d9790f6eb02')
+    sp = SparkPost(os.environ.get('SPARKPOST_API_KEY'))
 
     def __init__(self, from_email, to_email_list, cc_email_list=[], bcc_email_list=[], 
         subject="no subject", content="empty body"):
@@ -38,7 +39,8 @@ class SparkPostEmail:
 
 class SendGridEmail:
     """class object for creating and sending a email through SendGrid"""
-    sg = sendgrid.SendGridAPIClient(apikey='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')
+    # sg = sendgrid.SendGridAPIClient(apikey='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')
+    sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
 
     def __init__(self, from_email, to_email_list, cc_email_list=[], bcc_email_list=[], 
         subject="no subject", content="empty body"):
