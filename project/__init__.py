@@ -51,6 +51,8 @@ def send_email():
         content=content
         )
         res = email.send_email()
+        if res.status_code is not 200 or 201 or 202:
+            return Response("Email sending failed", 500)
         return Response("Backup provider succeeded, email sent!", res.status_code)
     else:
         # If original callback succeeded, return 200 response
