@@ -1,0 +1,2 @@
+curl -H "Content-Type: application/json" -X POST -d '{"to":["aaron.m.manley@gmail.com"],"from":"test@email.com","subject":"This is at est","content":"I am a email sent through just-do-it API!","cc":["ammanley@ucdavis.edu"]}' http://localhost:5000/api/send
+curl -H "Content-Type: application/json" -X POST -d '{"to":["aaron.m.manley@gmail.com"],"from":"test@email.com","subject":"This is at est","content":"I am a email sent through just-do-it API!","cc":["ammanley@ucdavis.edu"]}' https://nike-email-api.herokuapp.com/api/send
