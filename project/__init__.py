@@ -51,10 +51,10 @@ def send_email():
         content=content
         )
         res = email.send_email()
-        return Response(status=res.status_code)
+        return Response("Backup provider succeeded, email sent!", res.status_code)
     else:
         # If original callback succeeded, return 200 response
-        return res
+        return Response("Primary provider succeeded, email sent!", res.status_code)
 
 # if __name__ == "__main__":
 #     app.run(debug=True, port=5000)

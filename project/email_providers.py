@@ -74,12 +74,3 @@ class SendGridEmail:
         except:
             res = Response(status=400)
             return res
-
-        email = SendGridEmail(
-            from_email='anewtest@nowhere.com',
-            to_email_list=['aaron.manley@juno.com'],
-            cc_email_list=['aaron.m.manley@gmail.com'],
-            bcc_email_list=['ammaney@ucdavis.edu'],
-            subject='a stupid subject line',
-            content=''
-            )
