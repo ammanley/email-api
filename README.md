@@ -37,7 +37,7 @@ At this point, run ```python app.py ```, which will init your server from the pr
 
 The API is small, a single ```project``` package that contains the only current routing logic in ```__init__.py```, and imported classes in ```email_providers.py``` (making use of the email provider helper-libraries). You could scale out a complete exhaustive email API to include receive and tracking capability, as well as advanced HTML and file attachment sending, and abstract the functionality into individual class files in the ```project``` directory. Tests would also go here, though time was not on my side to write them. You would want to verify current functionality as well as mock the API responses. 
 
-Since the bulk of the project is a python ```package``` with structure based on OOP, the ```app.py``` file is only responsible for starting the server and a few housekeeping tasks at boot. ```Config.env``` is just a helper file for setting up ENV variables locally (I included the actual keys here, don't spread them around please!), as well as a Procfile and requirements.txt for easy deployment.
+Since the bulk of the project is a python ```package``` with structure based on OOP, the ```app.py``` file is only responsible for starting the server and a few housekeeping tasks at boot. ```Config.env``` is just a helper file for setting up ENV variables locally, as well as a Procfile and requirements.txt for easy deployment.
 
 Finally, you can find two pre-built CURL requests using my emails (feel free to sub them for your own), with one for local deployment and the other for the Heroku deployment. 
 
